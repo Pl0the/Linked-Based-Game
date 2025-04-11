@@ -17,7 +17,30 @@
             ]
         },
         "People": {
-            "Body": "You walk up slowly and the people seem"
+            "Body": "You walk up slowly and a woman turns to you and laughs. HAHAHA, last night was crazy right I barely remember anything! Anyway, I think your girlfriend was asking about you eariler I think see went to go gather fruits in the forest if you want to go find her.",
+            "Choices": [
+                {
+                    "Text": "Follow Christie",
+                    "Target": "Boats"
+                },
+                {
+                    "Text": "Head for the forest",
+                    "Target": "Forest"
+                }
+            ]
+        },
+        "GoingTowardsForest": {
+            "Body": "You walk towards the forest and enter moving through the thick tropical jungle",
+            "Choices": [
+                {
+                    "Text": "Continue Through the forest and look for your girlfriend",
+                    "Target": "Forest"
+                }
+            ]
+
+        },
+        "Boats": {
+            "Body": "you follow them and die!?!?!"
         },
         "Forest": {
             "Body": "You enter the forest and find yourself at a fork in the jungle. Left you see a path towards a mountainous area, to the right you see a path to a large clearing with lots of fruit trees.",
@@ -25,11 +48,16 @@
                 {
                     "Text": "Go towards the Mountains",
                     "Target": "Mountain"
+                },
+                {
+                    "Text": "Go towards the clearing",
+                    "Target": "Clearing"
                 }
             ]
         },
         "Mountain": {
             "Body": "You walk up to the mountain an struggle as its pretty steep. You eventually reach a hilly meadow where you can see a lot of people next to fishing boats. Some boats are even fishing far out into the ocean just before the reef surrounding the island.",
+            "Place": "Mount",
             "Choices": [
                 {
                     "Text": "Go back down to the fork in the road",
@@ -42,7 +70,34 @@
             ]
         },
         "Clearing": {
-            "Body": "You look around and give up"
+            "Body": "You look around and hear a strange noise in the distance. You look at the ground and see green coconuts all over the muddy, sandy floor. You suddenly have a strange urge to pick it up. ",
+            "Choices": [
+                {
+                    "Text": "Turn around and go back to the fork in the jungle",
+                    "Target": "Forest"
+                },
+                {
+                    "Text": "Pick up the coconut and look at it closer",
+                    "Target": "Event"
+                }
+            ]
+        },
+        "Event": {
+            "Body": "You pick up the coconut and see a memory of you real family. You see your son picking up a green coconut and trying to eat it while veyrone laughs. You look up at your wife and smile. She slowly fades away an you come back to reality. You suddenly remeber your family and how they are still alive and you have the sudden urge to find them. However, you stand up and see a leopard creeping up slowly getting reay to pounce.",
+            "Place": "Leopard",
+            "Choices": [
+                {
+                    "Text": "Run back to the fork in the road",
+                    "Target": "Forest"
+                },
+                {
+                    "Text": "Stand there in shock and fear",
+                    "Target": "LeopardDeath"
+                }
+            ]
+        },
+        "LeopardDeath": {
+            "Body": "You are ripped to shreds and eaten while still alive screaming in pain until you pass out"
         },
         "Beach": {
             "Body": "You reach the beach and escape the leopard, you continue sprinting towards a vacant boat"
