@@ -1,7 +1,12 @@
+var hasSeenMemory = false;
+var hasCrowbar = false;
+var isBeingChased = false;
+var hasEndedBefore = false;
+
 class Start extends Scene {
     create() {
         this.engine.setTitle(this.engine.storyData.Title); // TODO: replace this text using this.engine.storyData to find the story title
-        this.engine.addChoice("Begin the story");
+        this.engine.addChoice("Wake up?");
     }
 
     handleChoice() {
@@ -20,7 +25,7 @@ class Location extends Scene {
                  // TODO: add a useful second argument to addChoice so that the current code of handleChoice below works
             }
         } else {
-            this.engine.addChoice("The end.")
+            this.engine.addChoice("The end?")
         }
     }
 
@@ -29,7 +34,7 @@ class Location extends Scene {
             this.engine.show("&gt; "+choice.Text);
             this.engine.gotoScene(Location, choice.Target);
         } else {
-            this.engine.gotoScene(End);
+            this.engine.gotoScene(Location, this.engine.storyData.InitialLocation);
         }
     }
 }

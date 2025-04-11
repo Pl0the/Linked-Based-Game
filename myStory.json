@@ -1,94 +1,51 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Island",
+    "Credits": "Created by Austin Mendoza (autmendo@ucsc.edu).",
+    "InitialLocation": "Hammock",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Hammock": {
+            "Body": "You Awake from your slumber, groggy and disoriented. You look around and see that your on a remote tropical island. You see people in the distance but you are really freaked out and disoriented. ",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Go Towards the people",
+                    "Target": "People"
+                },
+                {
+                    "Text": "Run into the forest, and escape?",
+                    "Target": "Forest"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "People": {
+            "Body": "You walk up slowly and the people seem"
+        },
+        "Forest": {
+            "Body": "You enter the forest and find yourself at a fork in the jungle. Left you see a path towards a mountainous area, to the right you see a path to a large clearing with lots of fruit trees.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Go towards the Mountains",
+                    "Target": "Mountain"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Mountain": {
+            "Body": "You walk up to the mountain an struggle as its pretty steep. You eventually reach a hilly meadow where you can see a lot of people next to fishing boats. Some boats are even fishing far out into the ocean just before the reef surrounding the island.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Go back down to the fork in the road",
+                    "Target": "Forest"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Run towards the beach where the boats are",
+                    "Target": "Beach"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Beyond"
-                },
-                {
-                    "Text": "West",
-                    "Target": "Further"
-                }
-            ]
+        "Clearing": {
+            "Body": "You look around and give up"
         },
-        "Further": {
-            "Body": "You enter a whimsical forest of big talking banana slugs!",
-            "Choices": [
-                {
-                    "Text": "East",
-                    "Target": "Oakes"
-                },
-                {
-                    "Text": "Go to Party Hut",
-                    "Target": "CoolHut"
-                }
-            ]
-        },
-        "CoolHut": {
-            "Body": "You enter a grass hut with lots of dancing flowers and banana slugs",
-            "Choices": [
-                {
-                    "Text": "Go home",
-                    "Target": "Home"
-                },
-                {
-                    "Text": "Dance till your dead",
-                    "Target": "Dance"
-                }
-            ]
-        },
-        "Home": {
-            "Body": "You go home and passout, man what was that!"
-        },
-        "Dance": {
-            "Body": "You dance, and dance, and dance... and dance..... dan daccne..... n dand......... nnadce......"
-        },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Beach": {
+            "Body": "You reach the beach and escape the leopard, you continue sprinting towards a vacant boat"
         }
     }
 }
