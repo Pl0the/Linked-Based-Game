@@ -2,6 +2,7 @@ var hasSeenMemory = false;
 var hasCrowbar = false;
 var isBeingChased = false;
 var hasEndedBefore = false;
+var gotEaten = false;
 
 class Start extends Scene {
     create() {
@@ -33,6 +34,8 @@ class Location extends Scene {
         if(choice) {
             this.engine.show("&gt; "+choice.Text);
             this.engine.gotoScene(Location, choice.Target);
+        } else if(locationData.Place == "Dead") {
+            this.engine.gotoScene(End);
         } else {
             this.engine.gotoScene(Location, this.engine.storyData.InitialLocation);
         }

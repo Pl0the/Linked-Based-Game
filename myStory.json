@@ -43,7 +43,7 @@
             "Body": "you follow them and die!?!?!"
         },
         "Forest": {
-            "Body": "You enter the forest and find yourself at a fork in the jungle. Left you see a path towards a mountainous area, to the right you see a path to a large clearing with lots of fruit trees.",
+            "Body": "You find yourself at a fork in the jungle. You see a path towards a mountainous area, Next to it you see a path to a large clearing with lots of coconut trees.",
             "Choices": [
                 {
                     "Text": "Go towards the Mountains",
@@ -83,7 +83,7 @@
             ]
         },
         "Event": {
-            "Body": "You pick up the coconut and see a memory of you real family. You see your son picking up a green coconut and trying to eat it while veyrone laughs. You look up at your wife and smile. She slowly fades away an you come back to reality. You suddenly remeber your family and how they are still alive and you have the sudden urge to find them. However, you stand up and see a leopard creeping up slowly getting reay to pounce.",
+            "Body": "You pick up the coconut and see a memory of you real family. You see your son picking up a green coconut and trying to eat it while everyone laughs. You look up at your wife and smile. She slowly fades away an you come back to reality. You suddenly remeber your family and how they are still alive and you have the sudden urge to find them. However, you stand up and see a leopard creeping up slowly getting reay to pounce.",
             "Place": "Leopard",
             "Choices": [
                 {
@@ -97,7 +97,8 @@
             ]
         },
         "LeopardDeath": {
-            "Body": "You are ripped to shreds and eaten while still alive screaming in pain until you pass out"
+            "Body": "You are ripped to shreds and eaten while still alive screaming in pain until you pass out",
+            "Place": "Dead"
         },
         "Beach": {
             "Body": "You reach the beach and escape the leopard, you continue sprinting towards a vacant boat"
