@@ -44,6 +44,7 @@
         },
         "Forest": {
             "Body": "You find yourself at a fork in the jungle. You see a path towards a mountainous area, Next to it you see a path to a large clearing with lots of coconut trees.",
+            "Place": "Chasing",
             "Choices": [
                 {
                     "Text": "Go towards the Mountains",
@@ -56,18 +57,15 @@
             ]
         },
         "Mountain": {
-            "Body": "You walk up to the mountain an struggle as its pretty steep. You eventually reach a hilly meadow where you can see a lot of people next to fishing boats. Some boats are even fishing far out into the ocean just before the reef surrounding the island.",
+            "Body": "You go up the mountain an struggle as its pretty steep. You eventually reach a hilly meadow where you can see a lot of people next to fishing boats. Some boats are even fishing far out into the ocean just before the reef surrounding the island.",
             "Place": "Mount",
             "Choices": [
                 {
                     "Text": "Go back down to the fork in the road",
                     "Target": "Forest"
-                },
-                {
-                    "Text": "Run towards the beach where the boats are",
-                    "Target": "Beach"
                 }
             ]
+            
         },
         "Clearing": {
             "Body": "You look around and hear a strange noise in the distance. You look at the ground and see green coconuts all over the muddy, sandy floor. You suddenly have a strange urge to pick it up. ",
@@ -83,7 +81,7 @@
             ]
         },
         "Event": {
-            "Body": "You pick up the coconut and see a memory of you real family. You see your son picking up a green coconut and trying to eat it while everyone laughs. You look up at your wife and smile. She slowly fades away an you come back to reality. You suddenly remeber your family and how they are still alive and you have the sudden urge to find them. However, you stand up and see a leopard creeping up slowly getting reay to pounce.",
+            "Body": "You pick up the coconut and see a memory of you real family. You see your son picking up a green coconut and trying to eat it while everyone laughs. You look up at your wife and smile. She slowly fades away an you come back to reality. You suddenly remeber your family and how they are still alive and you have the sudden urge to find them. However, you stand up and see a leopard creeping up slowly getting ready to pounce.",
             "Place": "Leopard",
             "Choices": [
                 {
@@ -101,7 +99,26 @@
             "Place": "Dead"
         },
         "Beach": {
-            "Body": "You reach the beach and escape the leopard, you continue sprinting towards a vacant boat"
+            "Body": "You reach the beach and escape the leopard, you continue sprinting towards a vacant boat.",
+            "Choices": [
+                {
+                    "Text": "Grab the boat",
+                    "Target": "Waves"
+                }
+            ]
+        },
+        "Waves": {
+            "Body": "You push the boat off and people notice and yell at you, asking what you are doing. You set sail and try to get past the first set of huge waves.",
+            "Choices": [
+                {
+                    "Text": "Go diagonally against the waves",
+                    "Target": "WaterDeath"
+                }
+            ]
+        },
+        "WaterDeath": {
+            "Body": "You are knocked into the water and get trapped under the raft. you slowly loose contiousness and drown",
+            "Place": "Dead"
         }
     }
 }

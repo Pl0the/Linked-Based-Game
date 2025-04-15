@@ -21,7 +21,14 @@ class Location extends Scene {
         this.engine.show(locationData.Body); // TODO: replace this text by the Body of the location data
         
         if(locationData.Choices && locationData.Choices.length > 0) { // TODO: check if the location has any Choices
-            for(let choice of locationData.Choices) { // TODO: loop over the location's Choices
+            if(locationData.Place == "Leopard") {
+                isBeingChased = true;
+            }
+            if(locationData.Place == "Mount" && isBeingChased == true) {
+                this.engine.addChoice("Run towards the beach where the Boats are", { Text: "Run towards the beach where the boats are", Target: "Beach" });
+            }
+            for(let choice of locationData.Choices) {
+                // TODO: loop over the location's Choices
                 this.engine.addChoice(choice.Text, choice); // TODO: use the Text of the choice
                  // TODO: add a useful second argument to addChoice so that the current code of handleChoice below works
             }
@@ -36,6 +43,8 @@ class Location extends Scene {
             this.engine.gotoScene(Location, choice.Target);
         } else if(locationData.Place == "Dead") {
             this.engine.gotoScene(End);
+        } else if(choice.Text == "Go towards the clearing" && isBeingChased == true) {
+            this.engine.gotoScene(Location, this.engine.storyData.Locations.LeopardDeath);
         } else {
             this.engine.gotoScene(Location, this.engine.storyData.InitialLocation);
         }
