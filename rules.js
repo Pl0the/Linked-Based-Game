@@ -1,8 +1,8 @@
-var hasSeenMemory = false;
-var hasCrowbar = false;
+
 var isBeingChased = false;
-var hasEndedBefore = false;
-var gotEaten = false;
+var hasCrowBar = false;
+
+
 
 class Start extends Scene {
     create() {
@@ -15,6 +15,8 @@ class Start extends Scene {
     }
 }
 
+
+
 class Location extends Scene {
     create(key) {
         let locationData = this.engine.storyData.Locations[key]; // TODO: use `key` to get the data object for the current story location
@@ -23,6 +25,9 @@ class Location extends Scene {
         if(locationData.Choices && locationData.Choices.length > 0) { // TODO: check if the location has any Choices
             if(locationData.Place == "Leopard") {
                 isBeingChased = true;
+            }
+            if (locationData.QuickTime == "Quick") {
+                this.engine.addChoice("Quickly grab onto the pole", { Text: "Quickly grab onto the pole ", Target: "OceanEnd"});
             }
             if(locationData.Place == "Mount" && isBeingChased == true) {
                 this.engine.addChoice("Run towards the beach where the Boats are", { Text: "Run towards the beach where the boats are", Target: "Beach" });
@@ -43,7 +48,7 @@ class Location extends Scene {
             this.engine.gotoScene(Location, choice.Target);
         } else if(locationData.Place == "Dead") {
             this.engine.gotoScene(End);
-        } else if(choice.Text == "Go towards the clearing" && isBeingChased == true) {
+        } else if(choice && choice.Text == "Go towards the clearing" && isBeingChased == true) {
             this.engine.gotoScene(Location, this.engine.storyData.Locations.LeopardDeath);
         } else {
             this.engine.gotoScene(Location, this.engine.storyData.InitialLocation);
@@ -54,6 +59,7 @@ class Location extends Scene {
 class End extends Scene {
     create() {
         this.engine.show("<hr>");
+        this.engine.show("<h2>The End</h2>");
         this.engine.show(this.engine.storyData.Credits);
     }
 }

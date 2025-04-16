@@ -113,12 +113,76 @@
                 {
                     "Text": "Go diagonally against the waves",
                     "Target": "WaterDeath"
+                },
+                {
+                    "Text": "Go straight into the waves",
+                    "Target": "OceanReef"
                 }
             ]
         },
         "WaterDeath": {
             "Body": "You are knocked into the water and get trapped under the raft. you slowly loose contiousness and drown",
             "Place": "Dead"
+        },
+        "OceanReef":{
+            "Body": "You succesfully make it past the first set of waves and approach the reef. You look to see others in rafts trying to stop you from passing the protective reef.",
+            "Choices": [
+                {
+                    "Text": "Go to opening in the reef to head out to deep sea",
+                    "Target": "Ocean"
+                },
+                {
+                    "Text": "Go straight over the reef",
+                    "Target": "WaterDeath"
+                }
+            ]
+        },
+        "Ocean": {
+            "Body": "You make it out to sea where the fisherman and most of the island seem to stay away from. You soon figure out why, you notice huge waves coming at you and sail straight into them almost crashing. your hand slips, QUICK! Grab onto the middle pole of the boat.",
+            "QuickTime": "Quick",
+            "Choices": [
+                {
+                    "Text": "Do nothing",
+                    "Target": "WaterDeath"
+                }
+            ]
+        },
+        "OceanEnd": {
+            "Body": "You continue for a while and reach a wall that looks like the sky and horizon but is really a huge screen. You feel around the wall and find an outline of a tiny door.",
+            "Choices": [
+                {
+                    "Text": "Continue along the wall",
+                    "Target": "WallScene"
+                },
+                {
+                    "Text": "Open the tiny door",
+                    "Target": "Crowbar"
+                }
+            ]
+        },
+        "Crowbar": {
+            "Body": "You open the door and find out its a hatch for a tool stash. You look at the tools and grab the crow bar.",
+            "Choices": [
+                {
+                    "Text": "Continue on",
+                    "Target": "WallScene"
+                }
+            ]
+        },
+        "WallScene": {
+            "Body": "You contiue feeling your way along the wall until you reach an outline of a big door. You see a handle with a key lock.",
+            "Choices": [
+                {
+                    "Text": "Bang on the door",
+                    "Target": "EndingNoCrowBar"
+                }
+            ]
+        },
+        "EndingNoCrowBar": {
+            "Body": "You bang on the door again and again trying to escape. You sit there defeated, untill you hear the door open and you turn around to a group of people staring at you. One of them says 'well that didn't work what if we try...' And his voice fades off as he walks away with others. A man holding a tazer moves forward sighs a tazes you. You pass out."
+        },
+        "EndingCrowBar": {
+            "Body": "You use the crowbar you got and pry open the door. You slam it open and find a group of people standing there looking at you. One asks 'how did he get a crowbar?' Another comments 'well whatever you did seems to be moving us in the oposite direction.' Most of the group trails off arguing about something. A man holding a tazer moves forward sighs and says 'sorry, again'. he then tazes you. You pass out."
         }
     }
 }
