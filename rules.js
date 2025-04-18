@@ -36,9 +36,9 @@ class Location extends Scene {
                 { Text: "Run towards the beach where the boats are",Target: "Beach"});
         }
         
-        if(locationData.GiveKey == "Crowbar") {
-            hasCrowBar = true;
-        }
+        //if(locationData.GiveKey == "Crowbar") {
+        //    hasCrowBar = true;
+        //}
 
         if (locationData.Place == "Quick" || locationData.Place == "Reaching") {
             counter += 1;
@@ -90,7 +90,9 @@ class Location extends Scene {
             return;
         }
 
-    
+        if(choice.Target == "WallScene" && choice.Text == "Pick up the Crowbar and continue on"){
+            hasCrowBar = true;
+        }
 
         if(choice.Target =="Beach") {
             isBeingChased = false;
@@ -139,7 +141,7 @@ class BoatInteract extends Scene {
 class End extends Scene {
     create() {
         this.engine.show("<hr>");
-        this.engine.show("<h2>The End<h2>");
+        this.engine.show("<h2>YOU DIED! Thanks for playing!<h2>");
         this.engine.show(this.engine.storyData.Credits);
     }
 }

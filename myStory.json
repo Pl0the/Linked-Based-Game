@@ -178,11 +178,15 @@
             ]
         },
         "Crowbar": {
-            "Body": "You open the door and find out its a hatch for a tool stash. You look at the tools and grab the crow bar.",
+            "Body": "You open the door and find out its a hatch for a tool stash. You look at the tools and see a crow bar.",
             "GiveKey": "Crowbar",
             "Choices": [
                 {
                     "Text": "Continue on",
+                    "Target": "WallScene"
+                },
+                {
+                    "Text": "Pick up the Crowbar and continue on",
                     "Target": "WallScene"
                 }
             ]
