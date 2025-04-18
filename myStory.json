@@ -17,7 +17,7 @@
             ]
         },
         "People": {
-            "Body": "You walk up slowly and a woman turns to you and laughs. HAHAHA, last night was crazy right I barely remember anything! Anyway, I think your girlfriend was asking about you eariler I think see went to go gather fruits in the forest if you want to go find her.",
+            "Body": "You walk up slowly and a woman turns to you and laughs. 'HAHAHA, last night was crazy right I barely remember anything! Anyway, I think your girlfriend was asking about you eariler I think see went to go gather fruits in the forest if you want to go find her.'",
             "Choices": [
                 {
                     "Text": "Follow Christie",
@@ -40,7 +40,14 @@
 
         },
         "Boats": {
-            "Body": "you follow them and die!?!?!"
+            "Body": "You follow the group and find a bunch of fishing rafts scattered out on the sea and on shore. ",
+            "InteractiveMechanism": "BoatInteract",
+            "Choices": [
+                {
+                    "Text": "Go look for your girlfriend in the forest.",
+                    "Target": "GoingTowardsForest"
+                }
+            ]
         },
         "Forest": {
             "Body": "You find yourself at a fork in the jungle. You see a path towards a mountainous area, Next to it you see a path to a large clearing with lots of coconut trees.",
@@ -139,10 +146,20 @@
         },
         "Ocean": {
             "Body": "You make it out to sea where the fisherman and most of the island seem to stay away from. You soon figure out why, you notice huge waves coming at you and sail straight into them almost crashing. your hand slips, QUICK! Grab onto the middle pole of the boat.",
-            "QuickTime": "Quick",
+            "Place": "Quick",
             "Choices": [
                 {
                     "Text": "Do nothing",
+                    "Target": "WaterDeath"
+                }
+            ]
+        },
+        "QuickTime": {
+            "Body": "You try to grab onto the pole and miss, you scramble, Quick reach for it again!",
+            "Place": "Reaching",
+            "Choices": [
+                {
+                    "Text":"Do nothing",
                     "Target": "WaterDeath"
                 }
             ]
@@ -162,6 +179,7 @@
         },
         "Crowbar": {
             "Body": "You open the door and find out its a hatch for a tool stash. You look at the tools and grab the crow bar.",
+            "GiveKey": "Crowbar",
             "Choices": [
                 {
                     "Text": "Continue on",
@@ -171,10 +189,16 @@
         },
         "WallScene": {
             "Body": "You contiue feeling your way along the wall until you reach an outline of a big door. You see a handle with a key lock.",
+            "Place": "Wall",
             "Choices": [
                 {
                     "Text": "Bang on the door",
                     "Target": "EndingNoCrowBar"
+                },
+                {
+                    "Text": "Pry open the door with the crowbar",
+                    "Target": "EndingCrowBar",
+                    "NeededKey": "Crowbar"
                 }
             ]
         },
